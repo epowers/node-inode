@@ -9,9 +9,9 @@
 , "keywords": ["cache", "async", "redis"]
 , "scripts": {
     "preinstall": "#preinstall DO NOTHING",
-    "install": "node-waf configure build",
-    "update": "node-waf build",
-    "test": "node-waf && ./node_modules/nodeunit/bin/nodeunit test"}
+    "install": "coffee -co build/default src/inode.coffee",
+    "update": "coffee -co build/default src/inode.coffee",
+    "test": "coffee -co build/default src/inode.coffee && ./node_modules/nodeunit/bin/nodeunit test"}
 , "dependencies": {
     "coffee-script": ">= 1.1.1",
     "eyes":          "*",
